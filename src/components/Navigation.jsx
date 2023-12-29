@@ -3,16 +3,26 @@ import { Logo } from './Logo'
 import { useState } from 'react'
 
 export function Navigation() {
-  const [click, setClick] = useState(true)
+  const [click, setClick] = useState(false)
 
+  const scrollTo = (id) => {
+    let element = document.getElementById(id)
+    element.scrollIntoView({
+      behavior:'smooth',
+      block:'start',
+      inline:'nearest'
+    })
+    setClick(!click)
+  }
 
   return (
-    <Section>
+    <Section id='navigation'>
       <NavBar>
         <Logo />
+        <HamburgerMenu click={click} onClick={() => setClick(!click)} />
         <Menu click={click}>
-          <MenuItem> Home
-          </MenuItem>
+          <MenuItem onClick={() => scrollTo('home')}> Home </MenuItem>
+          <MenuItem onClick={() => scrollTo('about')}> About Us </MenuItem>
         </Menu>
       </NavBar>
     </Section>
