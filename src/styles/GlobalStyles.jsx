@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import '@fontsource/sora'
+import '@fontsource/fjalla-one'
+//import '@fontsource/akaya-telivigala'
 
 export const GlobalStyles = createGlobalStyle`
     *{

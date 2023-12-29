@@ -12,15 +12,16 @@ export function Logo() {
 }
 
 const LogoText = styled.h1`
-    font-family: 'Akaya Telivigala', cursive;
-    font-size:${(props) =>props.theme.fontxxxl};
-    color:${(props)=>props.theme.text};
+    font-family: 'Fjalla One', sans-serif;
+    //font-family: 'Akaya Telivigala', sans-serif;
+    font-size:${(props) => props.theme.fontxxxl};
+    color:${(props) => props.theme.text};
     transition: all 0.2s ease;
     &:hover{
         transform:scale(1.1)
     }
     @media (max-width: 64em){
-        font-size: ${(props) =>props.theme.fontxxl};
+        font-size: ${(props) => props.theme.fontxxl};
     }
 
 `
