@@ -1,11 +1,19 @@
 import styled from 'styled-components'
 import { Logo } from './Logo'
+import { useState } from 'react'
 
 export function Navigation() {
+  const [click, setClick] = useState(true)
+
+
   return (
     <Section>
       <NavBar>
         <Logo />
+        <Menu click={click}>
+          <MenuItem> Home
+          </MenuItem>
+        </Menu>
       </NavBar>
     </Section>
   )
