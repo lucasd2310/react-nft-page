@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 import { TypeWriterText } from '../TypeWriterText'
+import { CoverVideo } from '../CoverVideo'
 
 export function Home() {
   return <Section id='home'>
     <Container>
       <Box>
         <TypeWriterText />
+      </Box>
+      <Box>
+        <CoverVideo />
       </Box>
     </Container>
   </Section>
