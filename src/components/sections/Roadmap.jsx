@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { DrawSvg } from '../DrawSvg'
 
 export function Roadmap() {
   return (
@@ -6,7 +7,7 @@ export function Roadmap() {
       <Title>Roadmap</Title>
       <Container>
         <SvgContainer>
-
+          <DrawSvg />
         </SvgContainer>
       </Container>
     </Section>
