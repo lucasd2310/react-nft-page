@@ -8,9 +8,9 @@ export function Navigation() {
   const scrollTo = (id) => {
     let element = document.getElementById(id)
     element.scrollIntoView({
-      behavior:'smooth',
-      block:'start',
-      inline:'nearest'
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
     })
     setClick(!click)
   }
@@ -23,6 +23,7 @@ export function Navigation() {
         <Menu click={click}>
           <MenuItem onClick={() => scrollTo('home')}> Home </MenuItem>
           <MenuItem onClick={() => scrollTo('about')}> About Us </MenuItem>
+          <MenuItem onClick={() => scrollTo('roadmap')}> RoadMap</MenuItem>
         </Menu>
       </NavBar>
     </Section>
