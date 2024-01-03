@@ -10,7 +10,7 @@ export function CoverVideo() {
 }
 
 const VideoContainer = styled.div`
-  width: 100%;
+  width: auto;
   video {
     width: 100%;
     height: auto;

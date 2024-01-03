@@ -1,22 +1,28 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import imgreact from '../../assets/react.svg'
 import { TypeWriterText } from '../TypeWriterText'
 import { CoverVideo } from '../CoverVideo'
 
 export function Home() {
-  return <Section id='home'>
-    <Container>
-      <Box>
-        <TypeWriterText />
-      </Box>
-      <Box>
-        <CoverVideo />
-      </Box>
-    </Container>
-  </Section>
+  return (
+    <Section id='home'>
+      <Container>
+        <Box>
+          <TypeWriterText />
+        </Box>
+        <Box>
+          <CoverVideo />
+        </Box>
+        <Round>
+          <img src={imgreact} width={500} height={400} alt='React Logo' />
+        </Round>
+      </Container>
+    </Section>
+  )
 }
 
 const Section = styled.section`
-  min-height: ${(props) => `calc(100vh-${props.theme.navHeight})`};
+  min-height: ${(props) => `calc(100vh - ${props.theme.navHeight})`};
   width: 100vw;
   position: relative;
   background-color: ${(props) => props.theme.body};
@@ -47,4 +53,30 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`
+const rotate = keyframes`
+  100%{
+    transform:rotate(1turn);
+  }
+`
+const Round = styled.div`
+  position: absolute;
+  bottom: 2rem;
+  right: 90%;
+  width: 7rem;
+  img {
+    width: 100%;
+    height: auto;
+    animation: ${rotate} 6s linear infinite reverse;
+  }
+  @media (max-width: 64em) {
+    width: 4rem;
+    height: 4rem;
+    left: none;
+    right: 2rem;
+    bottom: 100%;
+  }
+  @media (max-width: 48em) {
+    right: 1.5rem;
+  }
 `

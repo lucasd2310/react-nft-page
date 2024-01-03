@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect'
-import '@fontsource/akaya-telivigala'
 import { Button } from './Button'
 
 export function TypeWriterText() {
