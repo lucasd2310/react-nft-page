@@ -41,7 +41,7 @@ export function TypeWriterText() {
 const Title = styled.h2`
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
-  width: 80%;
+  width: 100%;
   color: ${(props) => props.theme.text};
   align-self: flex-start;
   transition: all 0.5s ease-in-out;
@@ -66,7 +66,7 @@ const Title = styled.h2`
     text-align: center;
   }
   @media (max-width: 40em) {
-    width: 90%;
+    width: 100%;
   }
 `
 const SubTitle = styled.h3`
@@ -75,7 +75,7 @@ const SubTitle = styled.h3`
   color: ${(props) => `rgba(${props.theme.textRgba}, 0.6)`};
   font-weight: 600;
   margin-bottom: 1rem;
-  width: 80%;
+  width: 100%;
   align-self: flex-start;
   @media (max-width: 40em) {
     font-size: ${(props) => props.theme.fontmd};
@@ -86,7 +86,7 @@ const SubTitle = styled.h3`
   }
 `
 const ButtonContainer = styled.div`
-  width: 80%;
+  width: 100%;
   align-self: flex-start;
   @media (max-width: 48em) {
     align-self: center;
