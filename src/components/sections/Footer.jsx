@@ -5,17 +5,9 @@ import {Instagram} from '../icons/Instagram'
 import {LinkedIn} from '../icons/LinkedIn'
 import {Twitter} from '../icons/Twitter'
 import { Banner } from '../Banner'
+import { scrollTo } from '../../utils/utils'
 
 export function Footer() {
-  const scrollTo = (id) => {
-    let element = document.getElementById(id)
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    })
-  }
-
   return (
     <Section>
       <Banner />
