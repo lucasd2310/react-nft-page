@@ -8,6 +8,7 @@ import { Roadmap } from '../components/sections/Roadmap'
 import { Showcase } from '../components/sections/Showcase'
 import { Team } from '../components/sections/Team'
 import { Questions } from '../components/sections/Questions'
+import { Footer } from '../components/sections/Footer'
 
 export function MainMenu() {
   return (
@@ -21,6 +22,7 @@ export function MainMenu() {
         <Showcase />
         <Team />
         <Questions />
+        <Footer />
       </ThemeProvider>
     </main>
   )
