@@ -5,10 +5,10 @@ export function ConfettiComponent() {
   const { width, height } = useWindowSizes()
   return (
     <Confetti
-      numberOfPieces={180}
+      numberOfPieces={350}
       gravity={0.03}
       width={width}
-      height={height}
+      height={5*height}
     />
   )
 }
