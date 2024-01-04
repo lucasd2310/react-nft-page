@@ -1,14 +1,18 @@
 import styled, { ThemeProvider } from 'styled-components'
+import { lazy, Suspense } from 'react'
 import { Dark } from '../../styles/Themes'
-import { Carousel } from '../Carousel'
 import { Button } from '../Button'
+import { Loading } from '../Loading'
+const Carousel = lazy(() => import('../Carousel'))
 
 export function About() {
   return (
     <Section id='about'>
       <Container>
         <Box>
-          <Carousel />
+          <Suspense fallback={<Loading />}>
+            <Carousel />
+          </Suspense>
         </Box>
         <Box>
           <Title>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { lazy, Suspense } from 'react'
 import img1 from '../../assets/Nfts/bighead.svg'
 import img2 from '../../assets/Nfts/bighead-1.svg'
 import img3 from '../../assets/Nfts/bighead-2.svg'
@@ -8,7 +9,8 @@ import img6 from '../../assets/Nfts/bighead-5.svg'
 import img7 from '../../assets/Nfts/bighead-6.svg'
 import img8 from '../../assets/Nfts/bighead-7.svg'
 import img9 from '../../assets/Nfts/bighead-8.svg'
-import { ConfettiComponent } from '../Confetti'
+import { Loading } from '../Loading'
+const ConfettiComponent = lazy(() => import('../Confetti'))
 
 const MemberComponent = ({ img, name = '', position = '' }) => {
   return (
@@ -25,7 +27,9 @@ const MemberComponent = ({ img, name = '', position = '' }) => {
 export function Team() {
   return (
     <Section id='team'>
-      <ConfettiComponent />
+      <Suspense fallback={<Loading />}>
+            <ConfettiComponent />
+          </Suspense>
       <Title>Team</Title>
       <Container>
         <MemberComponent img={img1} name='SKYBLAZE' position='founder' />

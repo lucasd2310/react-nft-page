@@ -1,17 +1,23 @@
 import styled, { keyframes } from 'styled-components'
+import { lazy, Suspense } from 'react'
 import imgreact from '../../assets/react.svg'
-import { TypeWriterText } from '../TypeWriterText'
-import { CoverVideo } from '../CoverVideo'
+import { Loading } from '../Loading'
+const TypeWriterText = lazy(() => import('../TypeWriterText'))
+const CoverVideo = lazy(() => import('../CoverVideo'))
 
 export function Home() {
   return (
     <Section id='home'>
       <Container>
         <Box>
-          <TypeWriterText />
+          <Suspense fallback={<Loading />}>
+            <TypeWriterText />
+          </Suspense>
         </Box>
         <Box>
-          <CoverVideo />
+          <Suspense fallback={<Loading />}>
+            <CoverVideo />
+          </Suspense>
         </Box>
         <Round>
           <img src={imgreact} width={500} height={400} alt='React Logo' />
@@ -22,7 +28,7 @@ export function Home() {
 }
 
 const Section = styled.section`
-  min-height: 100vh;//${(props) => `calc(100vh - ${props.theme.navHeight})`};
+  min-height: 100vh; //${(props) => `calc(100vh - ${props.theme.navHeight})`};
   width: 100vw;
   position: relative;
   background-color: ${(props) => props.theme.body};
